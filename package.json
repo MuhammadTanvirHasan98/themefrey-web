@@ -14,12 +14,9 @@
     "motion": "^12.7.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "react-feather": "^2.0.10",
-    "react-icons": "^5.5.0"
-=======
+    "react-icons": "^5.5.0",
     "react-fast-marquee": "^1.6.5"
->>>>>>> 974718b3690fe69312b0ef57dbd1b023137e6f6e
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
