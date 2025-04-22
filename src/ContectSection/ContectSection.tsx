@@ -1,15 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const fadeInTop = {
+  hidden: { opacity: 0, y: -100 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+
 const ContactSection = () => {
   return (
     <div className="p-10 text-[#4700B4] flex flex-col justify-center items-center ">
       {/* Top Title */}
       <motion.h1
         className="text-3xl mb-10 font-bold text-center"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        variants={fadeInTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
         Ready to get started ?
       </motion.h1>
@@ -22,9 +46,10 @@ const ContactSection = () => {
             boxShadow: "0 0px 3px 0px gray",
           }}
           className="flex flex-col h-100 gap-10  mx-10 justify-center items-center  rounded-xl"
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h1 className="text-4xl font-bold mb-1">Get in touch</h1>
 
@@ -52,9 +77,10 @@ const ContactSection = () => {
         {/* FAQ Section */}
         <motion.div
           className="flex flex-col justify-center items-center w-full lg:w-1/2"
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          variants={fadeInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h1 className="text-4xl font-bold mb-4">FAQ</h1>
 

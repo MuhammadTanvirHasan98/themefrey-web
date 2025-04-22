@@ -3,24 +3,43 @@ import { motion } from "framer-motion";
 import clientData from "./data/data";
 import Marquee from "react-fast-marquee";
 
+const fadeInTop = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+const fadeInBottom = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+
 const ClientReviewSection = () => {
   return (
     <div className="w-full h-70 bg-[#B888FE] font-poppins  flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
       {/* Header Animation */}
       <motion.h1
         className="text-2xl sm:text-3xl text-white font-bold text-center mb-6"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        variants={fadeInTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
         Our clients reviews
       </motion.h1>
 
       {/* Reviews Animation */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        variants={fadeInBottom}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
         className="w-full max-w-screen-xl"
       >
         <Marquee delay={2} className="relative">
