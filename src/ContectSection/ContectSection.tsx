@@ -26,7 +26,7 @@ const fadeInRight = {
 
 const ContactSection = () => {
   return (
-    <div className="p-10 max-[390px]:p-5 text-[#4700B4] flex flex-col justify-center items-center">
+    <div className="p-10 max-[390px]:p-5 text-[#4700B4] flex flex-col justify-center items-center mb-20">
       {/* Top Title */}
       <motion.h1
         className="text-3xl max-[390px]:text-2xl mb-10 font-bold text-center"
@@ -43,7 +43,7 @@ const ContactSection = () => {
         {/* Form Section */}
         <motion.div
           style={{ boxShadow: "0 0px 3px 0px gray" }}
-          className="flex flex-col h-100 gap-10 mx-10 max-[390px]:mx-2 justify-center items-center rounded-xl max-[390px]:gap-6"
+          className="flex flex-col gap-10 mx-10 max-[390px]:mx-2 justify-center items-center rounded-xl max-[390px]:gap-6 px-10 py-24 bg-[#F9F5FF] w-full lg:w-1/2  max-[390px]:w-full "
           variants={fadeInLeft}
           initial="hidden"
           whileInView="visible"
@@ -85,14 +85,14 @@ const ContactSection = () => {
         >
           <h1 className="text-4xl max-[390px]:text-2xl font-bold mb-4">FAQ</h1>
 
-          <div className="bg-[#ECE8FD] p-6 rounded-xl shadow-md mb-7 w-full max-w-md">
+          <div className="bg-[#ECE8FD] p-6 rounded-xl shadow-md mb-4 w-full max-w-md">
             <h1 className="font-bold text-lg mb-2">How does it work?</h1>
             <p className="text-[#9647FE]">
               Choose a theme, customize it, and launch your website in minutes.
             </p>
           </div>
 
-          <div className="bg-[#ECE8FD] p-6 rounded-xl shadow-md mb-7 w-full max-w-md">
+          <div className="bg-[#ECE8FD] p-6 rounded-xl shadow-md mb-4 w-full max-w-md">
             <h1 className="font-bold text-lg mb-2">Is it mobile-friendly?</h1>
             <p className="text-[#9647FE]">
               Yes, all our themes are fully responsive and mobile-ready.

@@ -28,7 +28,7 @@ const fadeInRight = {
 
 const FeatureSection = () => {
   return (
-    <div className="bg-[#ECE2FD] flex flex-col items-center my-5">
+    <div className="mt-44 flex flex-col items-center my-5">
       <h1 className="font-bold text-3xl text-[#4700B4] mt-5 mb-8">
         Features we provide
       </h1>

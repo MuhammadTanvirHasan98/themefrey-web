@@ -10,7 +10,7 @@ import theme9 from "../assets/theme9.png";
 import theme10 from "../assets/theme10.png";
 import theme11 from "../assets/theme11.png";
 import theme12 from "../assets/theme12.png";
-import themeDemoBG from "../assets/demo-bg.png";
+// import themeDemoBG from "../assets/demo-bg.png";
 import { useState } from "react";
 
 const ThemeDemos = () => {
@@ -109,34 +109,36 @@ const ThemeDemos = () => {
 
   return (
     <section
-      className="py-16 px-4 relative overflow-hidden"
-      style={{
-        backgroundImage: `url(${themeDemoBG})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="py-16 px-4 relative overflow-hidden bg-gradient-to-b from-purple-100 to-white mt-44"
+      // style={{
+      //   backgroundImage: `url(${themeDemoBG})`,
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
     >
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-8">Theme Demos</h2>
+          <h2 className="text-4xl font-bold text-purple-800 mb-8">
+            Theme Demos
+          </h2>
 
-          <div className="inline-flex bg-white rounded-full p-1">
+          <div className="inline-flex bg-indigo-200 rounded-full p-1">
             <button
-              className={`px-6 py-2 rounded-full text-sm transition-colors duration-300 ${
+              className={`px-6 py-2 rounded-full text-sm transition-colors duration-300 font-semibold ${
                 activeFilter === "WEB"
                   ? "bg-purple-500 text-white"
-                  : "text-purple-700"
+                  : "text-purple-900"
               }`}
               onClick={() => setActiveFilter("WEB")}
             >
               WEB
             </button>
             <button
-              className={`px-6 py-2 rounded-full text-sm transition-colors duration-300 ${
+              className={`px-6 py-2 rounded-full text-sm transition-colors duration-300 font-semibold ${
                 activeFilter === "APP"
                   ? "bg-purple-500 text-white"
-                  : "text-purple-700"
+                  : "text-purple-900"
               }`}
               onClick={() => setActiveFilter("APP")}
             >
@@ -158,7 +160,7 @@ const ThemeDemos = () => {
                   className="w-full h-full p-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 bg-purple-500 text-white py-4 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-t-2xl">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-purple-700 via-blue-500 to-purple-700  text-white py-4 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out rounded-t-2xl">
                 <p className="text-center font-medium">{theme.category}</p>
                 <p className="text-center text-sm text-purple-100">
                   {theme.type}
@@ -170,7 +172,7 @@ const ThemeDemos = () => {
 
         <div className="text-center mt-12">
           <button
-            className="px-8 py-3 rounded-full border border-white text-white hover:bg-white hover:text-purple-500 transition-colors duration-300"
+            className="px-8 py-3 rounded-full border border-purple-800 text-purple-800 hover:bg-purple-900 hover:text-white font-semibold transition-colors duration-500"
             onClick={() => setActiveFilter("ALL")}
           >
             View all
