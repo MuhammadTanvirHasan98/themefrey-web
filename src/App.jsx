@@ -1,4 +1,5 @@
-import ClientSection from "./ClientSection/ClientSection";
+import ClientReviewSection from "./ClientSection/ClientReviewSection";
+import ContactSection from "./ContectSection/ContectSection";
 import Footer from "./FooterSection/Footer";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 
         <footer>
          {/* Footer will be placed here */}
-      <ClientSection/>
+         <ClientReviewSection/>
+         <ContactSection/>
         <Footer/>
         </footer>
       </div>
